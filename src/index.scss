@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1246px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@mixin fonts {
+    font: {
+        size: 14px;
+        weight: 400;
+        line-height: 150%;
+    }
+}
+
+
+.header {
+    padding: 24px 0;
+    border-bottom: 1px solid #e1e1e1;
+    background-color: rgb(187, 240, 240);
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        margin-right: 48px;
+        color: #343030;
+        line-height: 150%;
+
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        border: 1px solid #e1e1e1;
+        width: 294px;
+        height: 48px;
+       
+        color: #343030;
+        padding: 13px 16px;
+        @include fonts
+    }
+
+    &__find {
+        background: #403432;
+        width: 122px;
+        height: 48px;
+        color: #FFFFFF;
+        @include fonts
+    }
+
+}
